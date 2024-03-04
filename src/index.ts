@@ -1,12 +1,14 @@
 'use strict';
 
 import path from 'path';
-import express, { Request, Response, NextFunction } from 'express';
+import dotenv from 'dotenv';
+import express, { Request, Response } from 'express';
 import compression from 'compression';
 import staticServe from 'serve-static';
 import { create } from 'express-handlebars';
 import appRouter from './routes/app';
 
+dotenv.config()
 const app = express();
 
 /* Handlebars setup */
